@@ -5,7 +5,7 @@ Create New folder solarwork on your Desktop
 
 clone repository inside the solarwork folder
 
-## git clone [link](https://github.com/Debu07/solarstudy_new.git)
+## git clone [link](https://github.com/Debu07/solar_work_new.git)
 
 
 create virtual environment
