@@ -1,0 +1,43 @@
+{% extends 'landing/base.html' %}
+
+{% block content %}
+
+
+<style>
+
+    .card-img-top{
+        max-width: 200px;
+        max-height: 200px;
+        margin: 0 auto;
+        }
+
+</style>
+
+<div class="card">
+    <div class="card-body">
+        <img src="" alt="" class="card-img-top">
+        <h2 class="card-title">
+            Welcome, {{user.first_name}} {{user.last_name}}
+        </h2>
+        <h4 class="card-title">
+            Your registered Email Address is: <span style="color: blueviolet;">{{ user.email}}</span>
+        </h4>
+            <hr>
+            <div class="card card-body">
+        <h2 class="card-title">Number of posts/replies: <strong>{{ user.reply_set.count }} </strong></h2>
+        <p> Check Here: <a class="btn btn-secondary" href="{% url 'forum:index' %}">Forum</a></p>
+    </div>
+        <hr>
+        <a href="" class="btn btn-warning">Change Password</a>
+        <hr>
+
+
+        <p class="card-text">
+            Upgrade your <a class="btn btn-primary" href="{%  url 'membership:home' %}"> Membership</a>
+        </p>
+
+
+    </div>
+</div>
+
+{% endblock %}

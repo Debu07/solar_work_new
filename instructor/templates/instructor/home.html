@@ -1,0 +1,30 @@
+{% extends 'landing/base.html' %}
+
+{% block content %}
+
+<h1 class="text-center">Welcome to Instructor Dashboard</h1>
+<hr>
+
+<br>
+<div class="row">
+    <div class="col-sm-4">
+        <div class="card card-body">
+            <h3 class="card-title">
+                Want to Teach at Solar Study??
+            </h3>
+        </div>
+    </div>
+    <div class="col-sm-8">
+        <div class="card card-body">
+            <h3 class="card-title">Fill the form </h3>
+            <p class="card-text"> Our team will reach out to you.</p>
+            <form action="{% url 'instructor:profile' %}" method="POST">
+                {% csrf_token %}
+                
+                <input class="btn btn-success" type="submit" value="Submit">
+            </form>
+        </div>
+    </div>
+</div>
+<hr>
+{% endblock %}

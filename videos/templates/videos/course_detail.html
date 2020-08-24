@@ -1,0 +1,45 @@
+{% extends 'landing/base.html' %}
+
+{% block content %}
+
+<br>
+
+<div class="row">
+
+    <div class="col-12">
+<div class="card">
+    <div class="card-body" style="width: 100%">
+        <div class="row">
+            <div class="col-sm-6">
+                <img style ="max-width: 40rem;" src="{{object.thumbnail.url}}" alt="" class="card-img-top">
+            </div>
+            <div class="col-sm-6">
+                <p class="text-center">Course View </p>
+                <video controls> </video>
+            </div>
+        </div>
+    <h1 style="text-transform: uppercase;" class="card-title"> {{ object.title }}</h1>
+    <br>
+    <h3 class="card-title">Description</h3>
+    <p class="card-text">{{ object.description }}</p>
+    <hr>
+    <h3 class="card-text">Contents</h3>
+<div class="card">
+    <div class="card-body" style="width: 100%;">
+    {% for lesson in object.lessons %}
+        <a href="{{ lesson.get_absolute_url }}" class="btn btn-light">{{lesson.title}}</a>  
+<br>
+    {% endfor %}
+</div>
+</div>
+<br>
+<div class="card-body">
+<br>
+<a href="{% url 'videos:list' %}" class="btn btn-info">Back to Courses </a>
+</div>
+<div class="card-body">
+<a href="{% url 'forum:index' %}" class="btn btn-secondary">Forum </a>
+</div>
+<hr>
+
+{% endblock %}

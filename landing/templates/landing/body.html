@@ -1,0 +1,91 @@
+{% extends 'landing/base.html' %}
+
+{% load static %}
+
+
+{% block content %}
+<div class="row">
+    <div class="col-sm-8">
+        <h1>Solar Study   - Learning</h1>
+        <br>
+        <h5>Enhance your Solar Energy Knowledge </h5>
+        <br>
+        <input style="width: 400px;" class="form-control" type="text" placeholder="Search" aria-label="Search">
+    </div>
+    <div class="col-sm-4">
+        <span></span>
+    </div>
+</div>
+<hr>
+<div class="row">
+    <div class="col-5">
+
+        <h3>Begin your career in Solar PV Industry with Gold standard online certification programme</h3>
+        
+    </div>
+    <div style="text-align: center;" class="col-7">
+
+        <h3> Solar Study Fellowship </h3>
+        <br>
+        <p>It is an online course in Solar Energy domain, which is among very few NABCEP (North American Board For Certified Energy Pracitioners) PVA, programme in ASIA.</p>
+        <p>SSF is broadly divided into five domains: I. PV Applications, II. PV Sales & Economics, III. PV Design & Simulation, IV. PV Installation, and V. PV Operations & Maintenance</p>
+        <br>
+        <a class="btn btn-primary" href="">Explore More</a>    
+    </div>
+</div>
+<hr>
+<div class="row">
+
+    <div class="col">
+        <h2>Online Campus </h2>
+            <br>
+            <div class="view overlay zoom">
+                <img src="https://mdbootstrap.com/img/Photos/Horizontal/Nature/6-col/img%20(131).jpg" class="img-fluid " alt="zoom">
+                <div class="mask flex-center waves-effect waves-light">
+                </div>
+            </div>
+            <br>
+        <h5>Categories</h5>
+                <br> <br>
+        <div class="container">
+            <div class="row">
+                <div style="text-align: center;" class="card card-body">
+              <div class="col">Buisness</div>
+              <br>
+              <div class="col">Marketing</div>
+              
+              <br><div class="col">Design</div>
+              <br>
+              <div class="col">Finance</div>
+              <br>
+              <div class="col">Installation</div>
+              <br>
+              <div class="col">Monitoring</div>
+              
+              <br>
+              <div class="col">Applications</div>
+              <br>
+              <div class="col">Software</div>
+              <br>
+              <div style="text-align: center;">
+                <a href="" class="btn btn-info">Explore More</a>
+              </div>
+            </div>
+            </div>
+            
+          </div>
+            
+    </div>
+    <div style="text-align:center" class="col">
+        <h2>Get Course Recommendations </h2>
+        <br><br>
+        <p>Link your success with the most relevant online courses while getting personalized course recommendations from the experts </p>
+        <div class="view overlay zoom">
+            <img src="{% static 'images/recommendation.PNG' %}" class="img-fluid " alt="zoom">
+        </div>
+        <br>
+        <button type="button" class="btn btn-warning">Get Recomendations</button>
+    </div>
+</div>
+
+{% endblock %}
