@@ -13,6 +13,7 @@
           <div class="progress">
            <div class="progress__filled"></div>
           </div>
+
           <button class="player__button toggle" title="Toggle Play">►</button>
           <input type="range" name="volume" class="player__slider" min="0" max="1" step="0.05" value="1">
           <input type="range" name="playbackRate" class="player__slider" min="0.5" max="2" step="0.1" value="1">
@@ -24,6 +25,9 @@
       </div>
 <div class="card-body">
 <a href="{% url 'videos:detail' lesson.course.slug %}" class="btn btn-info">Back</a>
+
+<a href="{{ lesson.get_next_lesson }} " class="btn btn-warning">Next Lesson</a>
+<!--  url 'videos:lesson-detail' lesson.course.slug/lesson.next_slug  -->
 </div>
 
 <script src="{% static 'js/scripts.js' %}"></script>

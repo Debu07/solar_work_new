@@ -25,6 +25,7 @@ class Lesson(models.Model):
     position=models.IntegerField()
     video_file=models.FileField()
     date_posted=models.DateTimeField(auto_now_add=True)
+    next_slug=models.SlugField(null=True)
 
     def __str__(self):
         return self.course.title +" | "+ self.title
@@ -36,3 +37,10 @@ class Lesson(models.Model):
                 'course_slug':self.course.slug,
                 'lesson_slug':self.slug
                 })
+    def get_next_lesson(self):
+        return reverse('videos:lesson-detail',
+        kwargs={
+            'course_slug':self.course.slug,
+            'lesson_slug':self.next_slug
+        })
+  
